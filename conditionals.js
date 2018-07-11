@@ -35,7 +35,9 @@ let money = 100
 // Create a variable "item" and set it equal to the user's second command
 // line argument
 let item = process.argv[3];
-if(item == jacket){money - 40, health + 20, console.log("You bought a jacket");}
+if(item == jacket){money - 40, health + 20, console.log("You bought a jacket");
+}else if(item == candy){money - 10, console.log("You bought candy");
+}
 // If "item" is "jacket", subtract 40 from "money" and add 20 to "health" and console.log("You bought a jacket");
 // else if "item" is "candy", subtract 10 from "money" and console.log("You bought candy");
 // else if "item" is "paint", subtract 30 from "money" and console.log("You bought paint");
