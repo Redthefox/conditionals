@@ -35,15 +35,17 @@ let money = 100
 // Create a variable "item" and set it equal to the user's second command
 // line argument
 let item = process.argv[3];
-if(item == jacket){money - 40, health + 20, console.log("You bought a jacket");
-}else if(item == candy){money - 10, console.log("You bought candy");
-}
+if(item == "jacket"){money=100 - 40, health=100 + 20, console.log("You bought a jacket");
+}else if(item == "candy"){money=100 - 10, console.log("You bought candy");
+}else if(item =="paint"){money= 100-30, console.log("You bought paint");
+}else if (item == "hammer"){money= 100 - 70, console.log("You bought a hammer");
+} else (console.log("You bought nothing")); 
 // If "item" is "jacket", subtract 40 from "money" and add 20 to "health" and console.log("You bought a jacket");
 // else if "item" is "candy", subtract 10 from "money" and console.log("You bought candy");
 // else if "item" is "paint", subtract 30 from "money" and console.log("You bought paint");
 // else if "item" is "hammer", subtract 70 from "money" and console.log("You bought a hammer");
 // else console.log "You bought nothing"
-
+console.log('You have' + money + 'dollars left.');
 // console.log(`You have ${money} dollars left.`);
 
 // Test to make sure the script is working as intended.
@@ -61,7 +63,14 @@ const randomPerson = Math.random() > .5 ? "John" : "Felipe";
 
 // Create a variable "choice" and set it equal to the user's third
 // command line argument
+let choice = process.argv[4];
+if(choice==undefined){console.log("You shut down due to inactivity and get robbed of all your money");
+money=0} else if (choice !="run" && randomPerson =="Felipe"){
+    console.log("The protesters attack you..."); if (item != "jacket") {console.log("...but Felipe, a fellow android shows up to help you escape them")} 
+    else{console.log("...and Felipe, a fellow android, who would normally help doesn't recognize you with the jacket");
 
+}
+}
 // If "choice" is NOT defined (recall how we did this with the "username" variable)
 //      - console.log("You shut down due to inactivity and get robbed of all your money");
 //      - reduce "money" to 0
