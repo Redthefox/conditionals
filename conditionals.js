@@ -66,11 +66,11 @@ const randomPerson = Math.random() > .5 ? "John" : "Felipe";
 let choice = process.argv[4];
 if(choice==undefined){console.log("You shut down due to inactivity and get robbed of all your money");
 money=0} else if (choice !="run" && randomPerson =="Felipe"){
-    console.log("The protesters attack you..."); if (item != "jacket") {console.log("...but Felipe, a fellow android shows up to help you escape them")} 
+    console.log("The protesters attack you...");} else if (item != "jacket") {console.log("...but Felipe, a fellow android shows up to help you escape them")} 
     else{console.log("...and Felipe, a fellow android, who would normally help doesn't recognize you with the jacket");
 
 }
-}
+
 // If "choice" is NOT defined (recall how we did this with the "username" variable)
 //      - console.log("You shut down due to inactivity and get robbed of all your money");
 //      - reduce "money" to 0
